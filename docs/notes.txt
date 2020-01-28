@@ -1,0 +1,3 @@
+
+Currently hardwired to 3 squads.
+Tests need to be properly part of build script.
