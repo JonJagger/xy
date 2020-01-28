@@ -1,0 +1,36 @@
+<script>
+'use strict';
+$(() => {
+
+  const a = $('#decisions_a');
+  const b = $('#decisions_b');
+  const c = $('#decisions_c');
+  const partial = (i) => {
+    return i.val().trim().length != 5;
+  };
+  const enable_scores = () => {
+    $('#scores').prop('disabled', partial(a)||partial(b)||partial(c));
+  };
+  a.on('input', enable_scores);
+  b.on('input', enable_scores);
+  c.on('input', enable_scores);
+
+});
+</script>
+
+<input id="decisions_a" type="text" name="decisions_a" maxlength="5" value="">
+<input id="word_a" type="checkbox" name="word_a" value="">
+<br/>
+
+<input id="decisions_b" type="text" name="decisions_b" maxlength="5" value="">
+<input id="word_b" type="checkbox" name="word_b" value="">
+<br/>
+
+<input id="decisions_c" type="text" name="decisions_c" maxlength="5" value="">
+<input id="word_c" type="checkbox" name="word_c" value="">
+<br/>
+
+sentence:<input id="sentence" type="checkbox" name="sentence" value="">
+<br/>
+profound:<input id="profound" type="checkbox" name="profound" value="">
+<br/>

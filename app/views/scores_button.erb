@@ -1,0 +1,35 @@
+<script>
+'use strict';
+$(() => {
+
+  const post = (url) => {
+    $('<form>', {
+      method: 'post',
+      action: url
+    }).hide().appendTo($('body')).submit().remove();
+  };
+
+  const scores = $('button#scores');
+
+  scores.click(() => {
+    const params = $.param({
+      a:$('#decisions_a').val().trim(),
+      b:$('#decisions_b').val().trim(),
+      c:$('#decisions_c').val().trim(),
+      wa:$('#word_a').is(":checked"),
+      wb:$('#word_b').is(":checked"),
+      wc:$('#word_c').is(":checked"),
+      sentence:$('#sentence').is(":checked"),
+      profound:$('#profound').is(":checked")
+    });
+    post(`/scores?${params}`);
+  });
+
+  scores.prop('disabled', true);
+
+});
+</script>
+
+<div id="button-box">
+  <button type="button" id="scores">scores</button>
+</div>

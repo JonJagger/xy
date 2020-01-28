@@ -1,0 +1,27 @@
+
+Hi folks!
+I promised to report back on the initial run of the XY Business Game
+which I ran with my good friend Byran Wills-Heath of Bluefruit software.
+In no particular order...
+
+If you want the playing field to be level for both companies
+it's important that both companies have the same number of squads!
+
+Several participants did not know what fortune cookies were.
+For the next run we're going to try calling them riddles.
+
+We specified consulting only at the start of each round.
+Next time I think we'll try consulting at any time.
+
+It took me quite a while to write a scoring algorithm
+with the required properties of having successively higher
+scores once you understand each riddle and also works
+regardless of how many squads there are per company. If
+anyone would like a copy just shout (it's written in Ruby).
+
+I think the initial choice of values for the XY Scoring table
+is not that important as long as choosing all Y's gives the
+biggest overall company score.
+
+We found the period/decision/letter terminology a bit confusing
+so we just used 'decision' and 'letter'.

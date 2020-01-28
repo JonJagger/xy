@@ -1,0 +1,17 @@
+
+version: '3.7'
+
+services:
+
+  xy:
+    build:
+      context: app
+      args: [ COMMIT_SHA, XY_PORT ]
+    image: ${XY_IMAGE}
+    init: true
+    container_name: xy-container
+    ports: [ "${XY_PORT}:${XY_PORT}" ]
+    user: nobody
+    read_only: true
+    restart: "no"
+    tmpfs: [ "/tmp:exec,mode=1777" ]
