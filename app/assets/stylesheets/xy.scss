@@ -43,9 +43,9 @@ body
 
 #decisions
 {
-  margin: 30px;
   @include edged-panel();
   @include rounded-corner(6px);
+  padding: 30px;
 }
 
 #heading
@@ -53,9 +53,17 @@ body
   font-size: 3em;
 }
 
+input[type=text], input[type=checkbox]
+{
+  position: relative;
+  top: -6px;
+}
+
 input[type=checkbox]
 {
+  margin-left:10px;
   font-size: 4em;
+  transform: scale(2);
 }
 
 button
@@ -67,10 +75,12 @@ button
   cursor: pointer;
   padding: { left: 0.5em; right: 0.5em; bottom: 0.1em; }
   text-decoration: none;
+  text-align: left;
   font-weight: normal;
   font-size: 1.3em;
   border: 1px solid $darker-color;
-
+  margin-top: 10px;
+  width: 170px;
   &:hover { border: 1px dotted lighten($darker-color, 20%); }
   &[disabled]
   {
