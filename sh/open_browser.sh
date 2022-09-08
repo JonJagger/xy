@@ -1,4 +1,6 @@
-#!/bin/bash -Eeu
+#!/usr/bin/env bash
+set -Eeu
+
 source "${SH_DIR}/ip_address.sh"
 
 sleep 1

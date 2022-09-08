@@ -1,4 +1,5 @@
-#!/bin/bash -Eeu
+#!/usr/bin/env bash
+set -Eeu
 
 export SH_DIR="$( cd "$( dirname "${0}" )/sh" && pwd )"
 source ${SH_DIR}/env_vars.sh
