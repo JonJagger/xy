@@ -19,14 +19,14 @@
 # and lives in the current directory, then you can run:
 # $ docker run --rm --volume ${PWD}/XY.rb:/tmp/XY.rb ruby:alpine ruby /tmp/XY.rb
 
-def xy_scores(sentence, profound, a, b, c)
-  s = company_score(sentence, profound, a, b, c)
+def xy_scores(sentence, profound, a, b, c, d)
+  s = company_score(sentence, profound, a, b, c, d)
   squad_names = "ABCDEFGHIJKLMN"[0...s.size].chars
   totals = s.map{ |n| thou(sum(n)) }
   {
-    "Company-score" => thou(sum(s)),
-    "Squads-totals" => squad_names.zip(totals),
-    "Squads-scores" => squad_names.zip(s.map{|s| thou(s)})
+    "Org-score" => thou(sum(s)),
+    "Section-totals" => squad_names.zip(totals),
+    "Section-scores" => squad_names.zip(s.map{|s| thou(s)})
   }
 end
 

@@ -31,7 +31,8 @@ class XY < Sinatra::Base
     a = decisions('wa', 'a')
     b = decisions('wb', 'b')
     c = decisions('wc', 'c')
-    @scores = JSON.pretty_generate(xy_scores(sentence, profound, a,b,c))
+    d = decisions('wd', 'd')
+    @scores = JSON.pretty_generate(xy_scores(sentence, profound, a,b,c,d))
     erb :scores
   end
 
